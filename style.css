@@ -53,17 +53,11 @@ nav .nav-links a:hover {
 }
 
 /* 🔥 Responsive Navbar (hamburger) */
-.menu-toggle {
+.hamburger {
   display: none;
-  flex-direction: column;
+  font-size: 1.8rem;
   cursor: pointer;
-  gap: 5px;
-}
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #64ffda;
-  border-radius: 2px;
+  color: #64ffda;
 }
 @media (max-width: 768px) {
   nav .nav-links {
@@ -77,11 +71,11 @@ nav .nav-links a:hover {
     padding: 20px;
     transition: right 0.4s ease;
   }
-  nav .nav-links.show {
+  nav .nav-links.active {
     right: 0;
   }
-  .menu-toggle {
-    display: flex;
+  .hamburger {
+    display: block;
   }
 }
 

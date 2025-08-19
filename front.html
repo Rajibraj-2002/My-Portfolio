@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
-<!-- Font Awesome Icons -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
   <div id="toast">Welcome to My Portfolio!!</div>
+  
   <!-- Navbar -->
   <nav>
     <div class="logo">MY PORTFOLIO</div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#Projects">Projects</a></li>
-      <li><a href="academics.html">Academics</a></li> <!-- hyperlink -->
+      <li><a href="academics.html">Academics</a></li>
       <li><a href="Gallery.html">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
-      
     </ul>
   </nav>
 
@@ -33,19 +39,17 @@
       <h2>A Full Stack Developer</h2>
       <p>I build modern and responsive web applications with Django, HTML, CSS & JavaScript.</p>
       <div class="hero-buttons">
-        <!-- <a href="#portfolio" class="btn">View Work</a>
-        <a href="#contact" class="btn-outline">Contact Me</a> -->
         <div class="social-links">
-      <a href="https://www.linkedin.com/in/rajibrajraymohapatra2002" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/Rajibraj-2002" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:rajibrajraymohapatra@gmail.com" title="Gmail">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
+          <a href="https://www.linkedin.com/in/rajibrajraymohapatra2002" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Rajibraj-2002" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:rajibrajraymohapatra@gmail.com" title="Gmail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
     </div>
     
@@ -61,14 +65,11 @@
     <p>
       I’m a passionate and self-driven MCA graduate with hands-on experience in Backend development using Python, Django, and Django REST Framework, along with MySQL. I’ve built RESTful APIs, worked with database-driven applications, and explored frontend technologies to support full-stack development when needed.
 
-While I’m just starting my professional journey, I bring a strong understanding of software development principles, problem-solving skills, and a genuine enthusiasm to learn and grow in a real-world development environment.
+      While I’m just starting my professional journey, I bring a strong understanding of software development principles, problem-solving skills, and a genuine enthusiasm to learn and grow in a real-world development environment.
 
-Currently, I’m seeking opportunities to join a forward-thinking team where I can contribute to meaningful projects, enhance my skills, and grow as a backend developer.
+      Currently, I’m seeking opportunities to join a forward-thinking team where I can contribute to meaningful projects, enhance my skills, and grow as a backend developer.
     </p>
-    <!-- Resume Download Button -->
-    <a href="assets/Rajib Resume.pdf" download class="btn resume-btn">
-      📄 Download The Resume
-    </a>
+    <a href="assets/Rajib Resume.pdf" download class="btn resume-btn">📄 Download The Resume</a>
   </section>
 
   <!-- Services Section -->
@@ -99,20 +100,17 @@ Currently, I’m seeking opportunities to join a forward-thinking team where I c
         <span>Bankist Application</span>
         <p class="project-description">
           Developed Bankist, a full-stack banking web application with Django REST Framework and SQLite for secure
-authentication, transactions, and account management. Built a responsive frontend with JavaScript and deployed the
-solution on Netlify (frontend) and Render (backend), enabling real-time financial operations and a seamless user
-experience.
+          authentication, transactions, and account management. Built a responsive frontend with JavaScript and deployed the
+          solution on Netlify (frontend) and Render (backend), enabling real-time financial operations and a seamless user
+          experience.
         </p>
         <a href="https://rajib-frontend-bankist.netlify.app/bankist.html" target="_blank" class="btn">View Project</a>
       </div>
       <div class="portfolio-item">
         <i class="fas fa-folder icon"></i>
-        <span>Building a Scalable Real-Time Customer Relationship ManagementWeb Application</span>
-        <p class="project-description">Developed a “scalable real-time CRM web application” using Django for the backend and Web Sockets (via
-Django Channels) for live updates and interactions. Implemented core CRM features such as lead management,customer
-activity tracking, real-time messaging, and automated workflows. Designed RESTful APIs, integrated PostgreSQL for data
-persistence, and used Redis for managing asynchronous tasks and real-time communication—emphasised security with
-user authentication, permissions, and role-based access control.
+        <span>CRM Web Application</span>
+        <p class="project-description">
+          Developed a scalable real-time CRM web application using Django for the backend and Web Sockets (via Django Channels) for live updates and interactions. Implemented core CRM features such as lead management, customer activity tracking, real-time messaging, and automated workflows. Designed RESTful APIs, integrated PostgreSQL for data persistence, and used Redis for managing asynchronous tasks and real-time communication—emphasised security with user authentication, permissions, and role-based access control.
         </p>
         <a href="https://realestate.vichaarlab.in/" target="_blank" class="btn">View Project</a>
       </div>
@@ -143,14 +141,22 @@ user authentication, permissions, and role-based access control.
 
   <script src="script.js"></script>
   <script>
+    // Toast message
     window.onload = function () {
-    let toast = document.getElementById("toast");
-    toast.classList.add("show");
-    setTimeout(() => {
-      toast.classList.remove("show");
-    }, 3000); // hides after 3 seconds
-  };
-  </script>
+      let toast = document.getElementById("toast");
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    };
 
+    // Mobile Navbar Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
