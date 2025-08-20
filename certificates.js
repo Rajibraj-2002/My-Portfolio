@@ -5,21 +5,21 @@ const certContainer = document.getElementById('certificates-container');
 // Array of certificates with thumbnail images
 const certificates = [
   { 
-    name: "Software Engineering", 
+    name: "Software Engineering Certificate", 
     issuedBy: "NPTEL", 
-    year: 2023, 
+    year: 2024, 
     file: "certificates/Software Engineering Certificate.pdf",
     thumbnail: "certificates/Software Engineering Certificate.png"
   },
   { 
-    name: "Block Chain Builder", 
+    name: "Block Chain Builder Certificate", 
     issuedBy: "FIIT INDIA", 
     year: 2024, 
     file: "certificates/Blockchain certificate.pdf",
     thumbnail: "certificates/Blockchain certificate.png"
   },
   { 
-    name: "Django Internship Certificate", 
+    name: "Python Internship Certificate", 
     issuedBy: "VichaarLab pvt. Ltd.", 
     year: 2025, 
     file: "certificates/Rajib Internship Certificate.pdf",
