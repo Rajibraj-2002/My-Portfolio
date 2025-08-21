@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+  <h1>📸 My Memories</h1>
+  <!-- Place this inside your header/navbar -->
+  <a href="front.html" class="home-btn">Home</a>
+
+<!-- Add an id at the top of your page -->
+  <div id="top"></div>
+  <!-- Album Selector -->
+  <div class="album-list">
+    <button class="album-btn" data-album="university">🏫 University Days</button>
+    <button class="album-btn" data-album="friends">👬 Friends Forever</button>
+    <button class="album-btn" data-album="travel">🌍 Travel Moments</button>
+    <!-- <button class="album-btn" data-album="family">❤️ Family Love</button> -->
+  </div>
+
+  <!-- Loader -->
+  <div id="loader" class="loader">Loading...</div>
+
+  <!-- Album container (dynamically filled by JS) -->
+  <div id="albums"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
